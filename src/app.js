@@ -5,6 +5,8 @@ import userRouter from "./routes/user.route.js";
 import monastryRouter from "./routes/monastry.route.js";
 import archivesRouter from "./routes/archives.route.js";
 
+const serverless=require("serverless-http");
+
 const app = express();
 
 app.use(cors({
@@ -21,3 +23,4 @@ app.use("/api/v1/monasteries", monastryRouter);
 app.use("/api/v1/archives" , archivesRouter);
 
 export { app };
+module.exports.handler = serverless(app);
