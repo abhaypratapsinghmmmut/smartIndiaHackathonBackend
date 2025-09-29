@@ -20,4 +20,9 @@ app.use("/api/v1/users", userRouter);
 app.use("/api/v1/monasteries", monastryRouter);
 app.use("/api/v1/archives" , archivesRouter);
 
+app.get("/", (req, res) => {
+  res.send("Backend is running 🚀");
+});
+
+
 export { app };
