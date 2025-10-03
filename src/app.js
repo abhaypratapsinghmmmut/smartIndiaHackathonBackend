@@ -12,7 +12,6 @@ import chatRouter from "./routes/chat.route.js";
 const app = express();
 dotenv.config();
 
-// Middleware
 app.use(cors({
   origin: [
     "http://localhost:5173",
